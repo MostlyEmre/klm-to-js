@@ -1,0 +1,53 @@
+* {
+  color: whitesmoke;
+  background-color: rgb(22, 22, 22);
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  font-weight: lighter;
+}
+pre {
+  font-weight: lighter;
+}
+
+input[type="file"] {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  color: rgb(22, 22, 22);
+  padding: 11px 20px 10px 20px;
+  border-radius: 15px;
+}
+
+input[type="file"] button {
+}
+
+body {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  border: 3px solid aquamarine;
+  border-radius: 15px;
+  padding: 10px 15px;
+  margin-top: 30px;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}

@@ -33,8 +33,9 @@ const handleFiles = (e) => {
         });
         convertedData.push(data);
       });
-      content.innerHTML = JSON.stringify(convertedData, null, 2);
+      content.innerHTML = JSON.stringify(convertedData, null, 4);
       console.log(convertedData);
+      copyBtn.classList.remove("hidden");
     },
     false
   );
@@ -54,6 +55,11 @@ copyBtn.addEventListener("click", () => copyToClipboard(content.textContent));
 const copyToClipboard = async (string) => {
   navigator.clipboard
     .writeText(string)
-    .then(() => console.log("Copied! 😌"))
-    .catch((err) => console.log("Can't copy to clipboard.", err));
+    .then(() => (copyBtn.innerText = "Copied!"))
+    .then(() =>
+      setTimeout(() => {
+        copyBtn.innerText = "Copy to clipboard";
+      }, 1000)
+    )
+    .catch((err) => alert("Can't copy to clipboard.", err));
 };
