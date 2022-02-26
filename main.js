@@ -34,17 +34,14 @@ const handleFiles = (e) => {
         convertedData.push(data);
       });
       content.innerHTML = JSON.stringify(convertedData, null, 4);
-      console.log(convertedData);
       copyBtn.classList.remove("hidden");
     },
     false
   );
 
-  if (file) {
-    reader.readAsText(file);
-  }
+  if (file) reader.readAsText(file);
 };
-const content = document.querySelector("#klmContent");
+const content = document.querySelector("#kmlContent");
 const inputElement = document.getElementById("inputElement");
 inputElement.addEventListener("change", handleFiles, false);
 

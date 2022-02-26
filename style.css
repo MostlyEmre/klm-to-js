@@ -24,9 +24,6 @@ input[type="file"] {
   border-radius: 15px;
 }
 
-input[type="file"] button {
-}
-
 body {
   margin-top: 30px;
   display: flex;
