@@ -25,8 +25,8 @@ const handleFiles = (e) => {
 
           let point = {
             text: placemark.firstElementChild.textContent, // title of the place
-            lat: coordinates[1].replace(/\s+/g, ""), // 47.6154276
-            lng: coordinates[0].replace(/\s+/g, ""), // -122.3497142
+            lat: parseFloat(coordinates[1].replace(/\s+/g, "")), // 47.6154276
+            lng: parseFloat(coordinates[0].replace(/\s+/g, "")), // -122.3497142
           };
 
           data.points.push(point);
