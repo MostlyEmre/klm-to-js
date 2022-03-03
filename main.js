@@ -35,6 +35,7 @@ const handleFiles = (e) => {
       });
       content.innerHTML = JSON.stringify(convertedData, null, 4);
       copyBtn.classList.remove("hidden");
+      content.classList.remove("hidden");
     },
     false
   );
