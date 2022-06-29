@@ -9,11 +9,25 @@
   <body>
     <h1>KML TO JS</h1>
     <p>Converts Google Maps' .KML files to proper JS array.</p>
+
     <input type="file" accept=".kml" name="" id="inputElement" />
 
     <button class="button hidden" id="copy">Copy to clipboard</button>
 
     <div class="hidden" style="white-space: pre" id="kmlContent"></div>
+    <ul>
+      <li>
+        Open the map link you want to convert. (<a
+          href="https://www.google.com/maps/d/u/0/edit?mid=1UUj-pCl0P74PpWwy_6TC7ZBDOqFfogE&usp=sharing"
+          target="_blank"
+          >example</a
+        >)
+      </li>
+      <li>Click on 3 dots in the top right corner.</li>
+      <li>Click on "Download KML".</li>
+      <li>Check the box "Export to KML instead of KMZ. Does not support all icons".</li>
+      <li>Upload the file below, copy the generated text. Voilà!</li>
+    </ul>
   </body>
   <footer><a href="http://emre.ca" target="_blank">Emre</a> 👽 <a href="https://github.com/MostlyEmre/kml-to-js" target="_blank">GitHub</a></footer>
   <script type="module" src="main.js"></script>
