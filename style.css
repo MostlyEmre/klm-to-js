@@ -68,10 +68,12 @@ body {
   display: none;
 }
 footer {
-  margin-top: 50px;
+  margin-top: 20px;
+}
+footer a {
   opacity: 0.2;
   transition: 0.3s;
 }
-footer:hover {
+footer a:hover {
   opacity: 0.6;
 }
