@@ -1,3 +1,5 @@
+const corsProxyURL = "https://proxy.emree.workers.dev/?";
+
 const handleFiles = (e) => {
   const [file] = document.querySelector("input[type=file]").files;
   const reader = new FileReader();
@@ -61,3 +63,11 @@ const copyToClipboard = async (string) => {
     )
     .catch((err) => alert("Can't copy to clipboard.", err));
 };
+
+const analytics = (projectName, numberOfItems, timestamp) => {
+  const url = `${corsProxyURL}https://emrelytics.emree.workers.dev/p/${projectName}/c/${numberOfItems}/t/${timestamp}`;
+
+  fetch(url);
+};
+
+analytics("xmrdca", "1", "1974787487848");
