@@ -33,7 +33,7 @@ const handleFiles = (e) => {
           };
 
           data.points.push(point);
-          count++;
+          pointsCount++;
         });
         convertedData.push(data);
       });
