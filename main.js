@@ -1,4 +1,5 @@
 const corsProxyURL = "https://proxy.emree.workers.dev/?";
+// const corsProxyURL = "https://cors-anywhere.herokuapp.com/";
 
 const handleFiles = (e) => {
   const [file] = document.querySelector("input[type=file]").files;
