@@ -3,6 +3,7 @@ const corsProxyURL = "https://proxy.emree.workers.dev/?";
 const handleFiles = (e) => {
   const [file] = document.querySelector("input[type=file]").files;
   const reader = new FileReader();
+  let pointsCount = 0;
 
   reader.addEventListener(
     "load",
@@ -32,18 +33,24 @@ const handleFiles = (e) => {
           };
 
           data.points.push(point);
+          count++;
         });
         convertedData.push(data);
       });
+
       content.innerHTML = JSON.stringify(convertedData, null, 4);
       copyBtn.classList.remove("hidden");
       content.classList.remove("hidden");
+
+      // submits analytics
+      pointsCount && analytics("kml-to-js", pointsCount, Date.now());
     },
     false
   );
 
   if (file) reader.readAsText(file);
 };
+
 const content = document.querySelector("#kmlContent");
 const inputElement = document.getElementById("inputElement");
 inputElement.addEventListener("change", handleFiles, false);
@@ -69,5 +76,3 @@ const analytics = (projectName, numberOfItems, timestamp) => {
 
   fetch(url);
 };
-
-analytics("xmrdca", "1", "1974787487848");
