@@ -1,5 +1,6 @@
-const corsProxyURL = "https://proxy.emree.workers.dev/?";
+// const corsProxyURL = "https://proxy.emree.workers.dev/?";
 // const corsProxyURL = "https://cors-anywhere.herokuapp.com/";
+// example analytics url: https://emrelytics.emree.workers.dev/p/kml-to-js/c/10/t/1588010989898
 
 const handleFiles = (e) => {
   const [file] = document.querySelector("input[type=file]").files;
@@ -72,8 +73,9 @@ const copyToClipboard = async (string) => {
     .catch((err) => alert("Can't copy to clipboard.", err));
 };
 
-const analytics = (projectName, numberOfItems, timestamp) => {
-  const url = `${corsProxyURL}https://emrelytics.emree.workers.dev/p/${projectName}/c/${numberOfItems}/t/${timestamp}`;
+const analytics = async (projectName, numberOfItems, timestamp) => {
+  // const url = `${corsProxyURL}https://emrelytics.emree.workers.dev/p/${projectName}/c/${numberOfItems}/t/${timestamp}`;
+  const url = `https://emrelytics.emree.workers.dev/p/${projectName}/c/${numberOfItems}/t/${timestamp}`;
 
-  fetch(url);
+  await fetch(url);
 };
