@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./dist",
-    "lib": ["es2015"]
+    "lib": ["es2015", "es5", "es6", "dom"]
   }
   // "noImplicitAny": true,
   // "strictNullChecks": true
